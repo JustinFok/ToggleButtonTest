@@ -30,11 +30,12 @@ public class Classroom extends World
 
     public void prepare(int currentPeriod)
     {
-        removeObjects(getObjects(null));
-        ToggleBtn button = new ToggleBtn();
+        removeObjects(getObjects(null)); //Removes the last period
+
+        ToggleBtn button = new ToggleBtn(); // Puts in the toggle button
         addObject(button, 5, 1);
-        
-        if(currentPeriod == 2)
+
+        if(currentPeriod == 2) //Period 2 students
         {
 
             OlegBychenkov olegbychenkov = new OlegBychenkov("Oleg", "Bychenkov", 1, 2);
@@ -53,8 +54,10 @@ public class Classroom extends World
             addObject(shreyachandra, 2, 5);
             shreyachandra.sitDown();
         }
-        if(currentPeriod == 3)
+
+        if(currentPeriod == 3) //Period 3 students 
         {
+
             TameemSaydi tameemsaydi = new TameemSaydi("Tameem", "Saydi", 2, 7);
             addObject(tameemsaydi, 2, 7);
             tameemsaydi.sitDown();
